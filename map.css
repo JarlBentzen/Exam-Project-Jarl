@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gothic A1', sans-serif;
+}
+
+
+:root {
+    --drey: #444444;
+    --orange: #E87127;
+    --white: #FFFFFF;
+    --black: #000000;
+    --pink: #E827A0;
+    --ley: #6E6E6E;
+    --grey: #E9E9E9;
+    --yellow: #E8E827;
+    --cyan: #5CDED9;
+    --purple: #C16AC4;
+}
+
+.flex {
+    display: flex;
+}
+
+/* navigaiton */
+nav {
+    position: absolute;
+    width: 100%;
+    height: 10vh;
+    background-color: var(--drey);
+    padding: 0px;
+    margin: 0px;
+    top: 0;
+
+}
+
+nav img {
+    height: 6vh;
+    padding: 2vh;
+}
+
+.nav-links {
+    flex: 1;
+    top: 0;
+    left: 0;
+    align-content: flex-start;
+    display: flex;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 2rem 1rem;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+/* nav animation  */
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: var(--white);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+nav .fa {
+    display: none;
+}
+
+/* right side navigation */
+
+.alt-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--white);
+    display: flex;
+    align-items: baseline;
+}
+
+.iconsSmall {
+    height: 35px;
+    padding: 0.7rem;
+}
+
+.iconsBig {
+    height: 50px;
+    padding: 1rem;
+}
+
+/* map and markers */
+#map {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.marker {
+    background-image: url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/059/331/original/Icon_feather-map-pin.png?1671290620');
+    background-size: cover;
+    width: 49px;
+    height: 60px;
+    cursor: pointer;
+}
+
+/* map marker popups */
+
+.mapboxgl-popup {
+    width: 500px;
+}
+
+.mapboxgl-popup-content {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 45px;
+    color: var(--white);
+    background-color: var(--drey);
+    width: 500px;
+    height: 700px;
+    font-size: 20px;
+    bottom: 0;
+    display: inline-block;
+    position: relative;
+}
+
+
+.mapboxgl-popup-content .SoMe {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.mapboxgl-popup-content .fa {
+    color: var(--orange);
+    font-size: 40px;
+}
+
+/* upload popup and form */
+
+.popup {
+    width: 25%;
+    height: 50%;
+    background: var(--white);
+    border-radius: 35px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: left;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.open-popupAlt {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup h2 {
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+    padding-left: 3rem;
+}
+
+.popup p {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+    padding-left: 3rem;
+}
+
+
+.popup .buttonGroup {
+    display: flex;
+    gap: 5vh;
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+}
+
+
+.popup button {
+    width: 9rem;
+    padding: 10px 0;
+    background: var(--white);
+    border: 3px solid var(--drey);
+    color: var(--dery);
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+.popup .uploadButton {
+    background: var(--orange);
+    color: var(--white);
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.uploadForm {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.popup .uploadForm {
+    position: absolute;
+    left: 12%;
+}
+
+.btn {
+    padding: 60px;
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 30px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+#popupAlt h2 {
+    text-align: center;
+    padding: 0;
+}
+
+#popupAlt p {
+    text-align: center;
+    padding: 0;
+}
+
+#popupAlt img {
+    position: absolute;
+    left: 15%;
+}
+
+/* #marker {
+    background-image: url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/059/331/original/Icon_feather-map-pin.png?1671290620');
+    background-size: cover;
+    width: 25px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.mapboxgl-popup {
+    max-width: 200px;
+} */
+
+
+
+
+
+
+
+
+
+
+/* @media(max-width: 700px) {
+    .text-box h1 {
+        font-size: 20px;
+    }
+
+    .nav-links ul li {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    nav .fa {
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    nav-links ul {
+        padding: 30px;
+
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .testimonial-col img {
+        margin-left: 0px;
+        margin-right: 15px;
+    }
+} */
