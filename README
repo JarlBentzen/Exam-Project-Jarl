@@ -1,0 +1,20 @@
+Project: 
+This project we were tasked to create an experience website to show people hidden places in a city of our choice. 
+
+I chose to use hidden street art in Aarhus. 
+
+Specifically I made a website where you can tour Aarhus and find art which is hidden and displayed on the home pages map and also submit art that you find elsewhere. 
+this would then progress you in recieving badges and titles that you could show off to your other friends who use the website as well. 
+
+
+User instructions: 
+initially the program should be viewed in 1920 by 1080 pixels,
+
+the upload button in the bottom left has an interface which currently only works for this aspect ratio
+
+the rest of the document can be viewed from nearly any width and height 
+
+when viewing the desktop navigation dont use device emulation as it doesnt display the hover animation of the navigation
+
+
+UNfortunately Javascript ffeatures only work on the home page, I have copy and pasted the same code from the main page and the files are linked the same but it doesnt seem to work the same

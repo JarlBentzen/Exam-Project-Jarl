@@ -57,7 +57,7 @@ nav img {
 .nav-links ul li a {
     color: var(--white);
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 /* nav animation  */
@@ -121,6 +121,7 @@ nav .fa {
     width: 500px;
 }
 
+
 .mapboxgl-popup-content {
     text-align: center;
     font-family: 'Open Sans', sans-serif;
@@ -130,9 +131,6 @@ nav .fa {
     width: 500px;
     height: 700px;
     font-size: 20px;
-    bottom: 0;
-    display: inline-block;
-    position: relative;
 }
 
 
@@ -144,6 +142,11 @@ nav .fa {
 .mapboxgl-popup-content .fa {
     color: var(--orange);
     font-size: 40px;
+}
+
+.popupContent {
+    position: absolute;
+    bottom: 0.5rem;
 }
 
 /* upload popup and form */
@@ -235,17 +238,20 @@ input[type="file"] {
 }
 
 .btn {
-    padding: 60px;
+    padding: 30px;
     background: transparent;
     border: 0;
     outline: none;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 15px;
     font-weight: 500;
-    border-radius: 30px;
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     left: 0px;
+}
+
+.btn img {
+    width: 70%;
 }
 
 #popupAlt h2 {
@@ -263,67 +269,128 @@ input[type="file"] {
     left: 15%;
 }
 
-/* #marker {
-    background-image: url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/059/331/original/Icon_feather-map-pin.png?1671290620');
-    background-size: cover;
-    width: 25px;
-    height: 30px;
-    cursor: pointer;
+
+
+/* How it works page text */
+
+.information {
+    text-align: left;
+    font-size: 20px;
+    top: 20%;
+    left: 5%;
+    position: absolute;
+    color: var(--ley);
 }
 
-.mapboxgl-popup {
-    max-width: 200px;
-} */
+.information .title {
+    color: var(--orange);
+    display: flex;
+    font-size: 30;
+    font-weight: 400;
+    align-items: baseline;
+}
+
+.information .title .fa {
+    font-size: 60px;
+    padding-right: 1rem;
+}
+
+.information .more .fa {
+    color: var(--orange);
+    font-size: 30px;
+    padding-left: 4rem;
+    padding-bottom: 1rem;
+}
 
 
+/* gallery */
+
+.gallery {
+    display: flex;
+    width: 100%;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    padding-top: 3rem;
+}
+
+.gallery img {
+    width: 16.66%;
+}
+
+.filter {
+    padding-top: 7rem;
+}
+
+.filter img {
+    width: 40%;
+}
+
+.burger {
+    visibility: hidden;
+}
 
 
+@media(max-width: 768px) {
 
+    .gallery img {
+        width: 50%;
+    }
 
+    .btn {
+        left: 33vw;
+        position: fixed;
+    }
 
-
-
-
-/* @media(max-width: 700px) {
-    .text-box h1 {
-        font-size: 20px;
+    .alt-nav {
+        visibility: hidden;
     }
 
     .nav-links ul li {
-        display: block;
+        visibility: hidden;
     }
 
-    .nav-links {
+
+    /* responsive burger mneu */
+    .burger {
+        visibility: visible;
         position: absolute;
-        background: #f44336;
-        height: 100vh;
-        width: 200px;
         top: 0;
-        right: -200px;
-        text-align: left;
-        z-index: 2;
-        transition: 1s;
-    }
-
-    nav .fa {
-        display: block;
-        color: #fff;
-        margin: 10px;
-        font-size: 22px;
-        cursor: pointer;
-    }
-
-    nav-links ul {
-        padding: 30px;
+        right: 0;
+        width: 90px;
+        height: 100px;
 
     }
 
-    .row {
+    .burger button {
+        color: var(--white);
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+        box-shadow: none;
+        border: 2px solid var(--drey);
+    }
+
+    .hideburger {
+        display: flex;
         flex-direction: column;
+        gap: 3rem;
+        padding-top: 2rem;
+        visibility: hidden;
+        height: 80vh;
+        background: var(--white);
+        position: absolute;
+        right: 0px;
+        top: 106px;
+        font-size: 3rem;
+        padding: 1rem;
+        border-radius: 0px 0px 0px 15px;
     }
 
-    .testimonial-col img {
-        margin-left: 0px;
-        margin-right: 15px;
+    .hideburger .fa {
+        color: var(--black);
     }
-} */
+
+    .openhideburger {
+        visibility: visible;
+    }
+}
